@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestor de Tareas</h1>
+        
+        <!-- Formulario para nueva tarea -->
+        <div class="task-form">
+            <input type="text" id="taskTitle" placeholder="Título de la tarea">
+            <input type="text" id="taskDescription" placeholder="Descripción">
+            <button onclick="createTask()">Crear Tarea</button>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filters">
+            <button onclick="filterTasks('all')">Todas</button>
+            <button onclick="filterTasks('todo')">Por hacer</button>
+            <button onclick="filterTasks('doing')">En progreso</button>
+            <button onclick="filterTasks('done')">Completadas</button>
+        </div>
+
+        <!-- Lista de tareas -->
+        <div id="tasksList"></div>
+
+        <!-- Resumen -->
+        <div id="summary" class="summary"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
